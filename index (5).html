@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Aufa Amelia Putri</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {background:#ffe6f2; font-family:Arial, sans-serif; margin:0; padding:0; overflow-x:hidden;}
+    header {text-align:center; padding:20px;}
+    header h1 {color:#d63384; font-size:28px;}
+
+    /* Tulisan Selamat Datang */
+    .welcome {
+      text-align:center;
+      font-family:'Comic Sans MS', cursive, sans-serif;
+      font-size:32px;
+      font-weight:bold;
+      color:#ff1493;
+      animation: glow 2s infinite alternate;
+      margin-top:10px;
+    }
+    @keyframes glow {
+      from {text-shadow:0 0 5px #ff4fa8, 0 0 10px #ff99cc;}
+      to {text-shadow:0 0 20px #ff1a75, 0 0 30px #ff66a3;}
+    }
+
+    .profile {text-align:center; margin:15px;}
+    .profile img {
+      width:220px; height:220px;
+      border-radius:50%;
+      border:8px solid #ffb6d9;
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .content {width:90%; max-width:850px; margin:0 auto; background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    h2 {color:#a60063; border-bottom:2px solid #ffb6d9; padding-bottom:6px;}
+    table {width:100%; border-collapse:collapse; margin-top:10px;}
+    th,td {border:1px solid #ffd9e6; padding:6px; text-align:left;}
+    th {background:#fff0f8;}
+    .chart-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:15px;}
+    canvas {background:#fff; border-radius:10px; padding:10px;}
+
+    /* Dropdown translate */
+    .translate-box {text-align:center; margin:10px;}
+    select {padding:6px 12px; border-radius:6px; border:1px solid #ff80bf;}
+
+    /* Animasi Love & Bintang */
+    .floating {position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden;}
+    .shape {position:absolute; font-size:16px; color:#ff4fa8; animation:floatDown linear infinite;}
+    @keyframes floatDown {from{transform:translateY(-10%);} to{transform:translateY(110%);} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Biodata Aufa Amelia Putri</h1>
+    <div class="welcome">🌸 Selamat Datang di Website Aufa 🌸</div>
+  </header>
+
+  <div class="profile">
+    <img src="WhatsApp Image 2025-09-16 at 12.59.59 (1).jpeg" alt="Foto Profil Aufa Amelia Putri">
+  </div>
+
+  <div class="translate-box">
+    <label for="language">🌐 Pilih Bahasa:</label>
+    <select id="language" onchange="translateLang()">
+      <option value="id">Indonesia</option>
+      <option value="en">English</option>
+      <option value="jv">Jawa</option>
+      <option value="ar">العربية</option>
+    </select>
+  </div>
+
+  <div class="content" id="content">
+    <h2>Identitas Pribadi</h2>
+    <p><b>Nama:</b> AUFA AMELIA PUTRI<br>
+    <b>TTL:</b> Pekalongan, 17 Maret 2009<br>
+    <b>Jenis Kelamin:</b> Perempuan<br>
+    <b>Agama:</b> Islam<br>
+    <b>Kewarganegaraan:</b> Indonesia<br>
+    <b>Alamat:</b>Desa Dadirejo RT5 RW2, Tirto, Kab. Pekalongan, Jawa Tengah<br>
+    <b>Email:</b> fameliafamelia793@gmail.com<br>
+    <b>Telepon:</b> 0815337637475</p>
+
+    <h2>Data Pendidikan</h2>
+    <p>TK: TK RA MUSLIMAT WARULOR<br>
+    SD: MI SALAFIYAH WARULOR<br>
+    SMP: SMP N 02 TIRTO<br>
+    SMK: SMK Ma’arif NU Tirto — TKJ</p>
+
+    <h2>Hobi & Keahlian</h2>
+    <p><b>Hobi:</b> makan, membaca, jalan-jalan<br>
+    <b>Kemampuan:</b> beradaptasi, kreativitas</p>
+    <div class="chart-container">
+      <canvas id="pieHobi" width="240" height="240"></canvas>
+      <canvas id="barSkill" width="260" height="240"></canvas>
+    </div>
+
+    <h2>Cita-cita & Motivasi</h2>
+    <p><b>Cita-cita:</b> Bos muda</p>
+
+    <h2>Aktivitas dalam Seminggu</h2>
+    <table>
+      <tr><th>Waktu</th><th>Kegiatan</th></tr>
+      <tr><td>05.00</td><td>Bangun tidur</td></tr>
+      <tr><td>07.00 - 15.00</td><td>Sekolah, ulangan</td></tr>
+      <tr><td>16.00</td><td>Makan</td></tr>
+      <tr><td>17.00 - 22.15</td><td>Menyelesaikan tugas & aktivitas bermanfaat</td></tr>
+      <tr><td>22.30</td><td>Tidur</td></tr>
+    </table>
+
+    <h2>Perjalanan Hidup</h2>
+    <p>Dari MI sampai sekarang semua berjalan dengan lancar dan saya mempunyai banyak pengalaman dan teman.</p>
+
+    <h2>Refleksi Diri</h2>
+    <p>"Kesehatan fisik dan mental sangat penting bagi saya. Saya akan berusaha untuk menjaga kesehatan sebisa mungkin. Saya juga akan mencari keseimbangan antara pekerjaan, keluarga, dan waktu untuk diri sendiri."</p>
+
+    <h2>Sejarah Hidup</h2>
+    <p>Saya lahir di Pekalongan pada Selasa 17 Maret 2009. Saya 2 bersaudara yaitu kakak saya Lisa Khudrotul Nada. Sedari kecil bersama kedua orang tua dan kakak saya tinggal di Wiradesa Desa Secumpleng, tapi kami pindah ke Tirto Dadirejo satu tahun lalu karena ada sedikit masalah keluarga. Saya kalau sekolah selalu diantar orang tua, kadang sama teman. Kalau pulang juga dijemput orang tua. Dari TK sampai SMK saya tidak dibolehkan berangkat sekolah sendiri. Sekiranya itu saja yang dapat saya ceritakan tentang sejarah hidup saya.</p>
+
+    <h2>Motto Hidup</h2>
+    <p>"Hidup adalah perjuangan, nikmati setiap langkahnya"<br>
+    Urip iku perjuangan, nikmati saben langkahe<br>
+    الحياة صراع، استمتع بكل خطوة<br>
+    Life is a struggle, enjoy every step</p>
+  </div>
+
+  <div class="floating" id="floating"></div>
+
+  <script>
+    // Chart.js
+    new Chart(document.getElementById('pieHobi'), {
+      type: 'pie',
+      data: {labels: ['Makan','Membaca','Jalan-jalan'],datasets:[{data:[30,35,35],backgroundColor:['#ff99cc','#ffb3d9','#ffd9ec']}]} ,
+      options:{plugins:{legend:{position:'bottom'}}}
+    });
+
+    new Chart(document.getElementById('barSkill'), {
+      type: 'bar',
+      data: {labels: ['Beradaptasi','Kreativitas'],datasets:[{data:[8,9],backgroundColor:['#ff80bf','#ffb3d9']}]} ,
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:10}}}
+    });
+
+    // Animasi love & bintang
+    const floating=document.getElementById('floating');
+    const shapes=['❤','★'];
+    setInterval(()=>{
+      const el=document.createElement('div');
+      el.className='shape';
+      el.textContent=shapes[Math.floor(Math.random()*shapes.length)];
+      el.style.left=Math.random()*100+'%';
+      el.style.fontSize=(12+Math.random()*18)+'px';
+      el.style.animationDuration=(4+Math.random()*6)+'s';
+      floating.appendChild(el);
+      setTimeout(()=>el.remove(),10000);
+    },400);
+
+    // Translate sederhana
+    function translateLang(){
+      const lang=document.getElementById("language").value;
+      const content=document.getElementById("content");
+      if(lang==="en"){
+        content.querySelector("h2").innerText="Personal Identity";
+      }else if(lang==="jv"){
+        content.querySelector("h2").innerText="Identitas Pribadi (Jawa)";
+      }else if(lang==="ar"){
+        content.querySelector("h2").innerText="الهوية الشخصية";
+      }else{
+        content.querySelector("h2").innerText="Identitas Pribadi";
+      }
+    }
+  </script>
+</body>
+</html>
